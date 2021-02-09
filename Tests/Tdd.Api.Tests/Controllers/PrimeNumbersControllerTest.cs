@@ -1,12 +1,12 @@
-using NUnit.Framework;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Moq;
+using NUnit.Framework;
 using Primes.API.Controllers;
 using Primes.Lib.Services;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 
-namespace Tdd.Api.Tests.Controllers{
+namespace Tdd.Api.Tests.Controllers {
 	public class PrimeNumbersControllerTests {
 		private readonly Mock<IPrimeNumbers> _mock;
 		private readonly PrimeNumbersController _controller;
