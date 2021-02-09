@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Primes.Lib.Services;
 
 namespace Primes.Lib.Concrete {
 	class ManipulateStrings : IManipulateStrings {
