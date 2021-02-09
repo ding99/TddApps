@@ -18,7 +18,7 @@ namespace Primes.API.Controllers {
 		[ProducesResponseType(200)]
 		[ProducesResponseType(500)]
 		public async Task<IActionResult> IsPrimeNumber(int number) {
-			return await Task.Run(() => StatusCode(200));
+			return await Task.Run(() => Ok());
 		}
 
 		[HttpGet("{number}")]
@@ -26,7 +26,7 @@ namespace Primes.API.Controllers {
 		[ProducesResponseType(400)]
 		[ProducesResponseType(500)]
 		public async Task<IActionResult> FirstPrimeNumbers(int number) {
-			return await Task.Run(() => StatusCode(200));
+			return await Task.Run(() => Ok());
 		}
 	}
 }
