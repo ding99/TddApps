@@ -1,7 +1,7 @@
 using NUnit.Framework;
 
 namespace Tdd.Lib.Tests.Services {
-	public class PrimeNumbersTests {
+	public class PrimeNumbersServicesTests {
 		[SetUp]
 		public void Setup() {
 		}
