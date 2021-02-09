@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Primes.Lib", "Primes.Lib\Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tdd.Api.Tests", "Tests\Tdd.Api.Tests\Tdd.Api.Tests.csproj", "{5863B293-D7C0-48E8-B2F4-E511409322D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tdd.Lib.Tests", "Tests\Tdd.Lib.Tests\Tdd.Lib.Tests.csproj", "{6E48BCC3-4CC4-42A4-B8FB-2BDE6348CD46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,12 +31,17 @@ Global
 		{5863B293-D7C0-48E8-B2F4-E511409322D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5863B293-D7C0-48E8-B2F4-E511409322D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5863B293-D7C0-48E8-B2F4-E511409322D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E48BCC3-4CC4-42A4-B8FB-2BDE6348CD46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E48BCC3-4CC4-42A4-B8FB-2BDE6348CD46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E48BCC3-4CC4-42A4-B8FB-2BDE6348CD46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E48BCC3-4CC4-42A4-B8FB-2BDE6348CD46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5863B293-D7C0-48E8-B2F4-E511409322D3} = {D258A962-6F13-44A5-B953-560251645998}
+		{6E48BCC3-4CC4-42A4-B8FB-2BDE6348CD46} = {D258A962-6F13-44A5-B953-560251645998}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {99FC7AB6-C931-4785-9C2C-6EF6DB87159B}
