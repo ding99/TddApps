@@ -4,8 +4,8 @@ using Moq;
 using NUnit.Framework;
 using Primes.API.Controllers;
 using Primes.Lib.Services;
-using System.Threading.Tasks;
 using System;
+using System.Threading.Tasks;
 
 namespace Tdd.Api.Tests.Controllers {
 	public class PrimeNumbersControllerTests {
@@ -74,7 +74,7 @@ namespace Tdd.Api.Tests.Controllers {
 		[TestCase(-4)]
 		[TestCase(null)]
 		public async Task TestFirstPrimeNumbers_Bad(int value) {
-			int[] expectedValue = new int[] { -1 };
+			int[] expectedValue = new int[0];
 
 			_mock.Setup(p => p.FirstPrimeNumbers(value)).Returns(Task.FromResult(expectedValue));
 
