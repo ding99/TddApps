@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Primes.Lib.Services;
 
 namespace Primes.Lib.Concrete {
-	class ManipulateStrings : IManipulateStrings {
+	public class ManipulateStrings : IManipulateStrings {
         string Inversion(string words) {
             return string.Join(" ", Enumerable.Reverse(words.Split(' ').ToList()).ToArray());
         }
