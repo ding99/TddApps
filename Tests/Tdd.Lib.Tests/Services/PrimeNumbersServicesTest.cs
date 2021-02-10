@@ -1,8 +1,5 @@
-using Moq;
 using NUnit.Framework;
-using Primes.Lib.Services;
 using Primes.Lib.Concrete;
-using System;
 using System.Threading.Tasks;
 
 namespace Tdd.Lib.Tests.Services {
