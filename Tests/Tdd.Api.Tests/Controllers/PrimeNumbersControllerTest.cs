@@ -84,10 +84,9 @@ namespace Tdd.Api.Tests.Controllers {
 			Assert.AreEqual(expectedValue, result.Value);
 		}
 
-
 		[TestCase(null)]
 		public async Task TestFirstPrimeNumbers_Exception(int value) {
-			string expectedMessage = "Invalid input";
+			//string expectedMessage = "Invalid input"; //TODO
 
 			_mock.Setup(p => p.FirstPrimeNumbers(It.IsAny<int>())).Throws<Exception>();
 
