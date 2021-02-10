@@ -30,9 +30,7 @@ namespace Primes.Lib.Concrete {
         public async Task<int[]> FirstPrimeNumbers(int count) {
             List<int> lists = new List<int>();
 
-            if (count < 0) {
-                lists.Add(-1);
-            } else if (count > 0) {
+            if (count > 0) {
                 for (int i = 0; i < Int32.MaxValue; i++) {
                     if (await IsPrimeNumber(i)) {
                         lists.Add(i);
