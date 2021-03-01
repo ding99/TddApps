@@ -9,6 +9,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Primes.Lib.Services;
+using Primes.Lib.Concrete;
 
 namespace Primes.API {
 	public class Startup {
@@ -21,6 +23,13 @@ namespace Primes.API {
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services) {
 			services.AddControllers();
+
+			services.AddScoped<IPrimeNumbers, PrimeNumbers>();
+			services.AddScoped<IManipulateStrings, ManipulateStrings>();
+
+			services.AddSwaggerGen(c => {
+				c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Primes.API", Version = "v1" });
+			});
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -28,6 +37,11 @@ namespace Primes.API {
 			if (env.IsDevelopment()) {
 				app.UseDeveloperExceptionPage();
 			}
+
+			app.UseSwagger();
+			app.UseSwaggerUI(c => {
+				c.SwaggerEndpoint("/swagger/v1/swagger.json", "Primes.API v1");
+			});
 
 			app.UseRouting();
 
