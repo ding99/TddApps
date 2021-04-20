@@ -72,7 +72,6 @@ namespace Tdd.Api.Tests.Controllers {
 		[TestCase(-2)]
 		[TestCase(-3)]
 		[TestCase(-4)]
-		[TestCase(null)]
 		public async Task TestFirstPrimeNumbers_Bad(int value) {
 			int[] expectedValue = new int[0];
 
@@ -86,8 +85,6 @@ namespace Tdd.Api.Tests.Controllers {
 
 		[TestCase(null)]
 		public async Task TestFirstPrimeNumbers_Exception(int value) {
-			//string expectedMessage = "Invalid input"; //TODO
-
 			_mock.Setup(p => p.FirstPrimeNumbers(It.IsAny<int>())).Throws<Exception>();
 
 			var result = (ObjectResult)await _controller.FirstPrimeNumbers(value);
