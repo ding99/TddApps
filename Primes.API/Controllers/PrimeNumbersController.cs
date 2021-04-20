@@ -20,12 +20,13 @@ namespace Primes.API.Controllers {
 		[ProducesResponseType(200)]
 		[ProducesResponseType(500)]
 		public async Task<IActionResult> IsPrimeNumber(int number) {
-			return Ok(await Task.Run(() => true));
-			//try {
-			//	return Ok(await _service.IsPrimeNumber(number));
-			//} catch(Exception e) {
-			//	return StatusCode(500, e);
-			//}
+			//return Ok(await Task.Run(() => true));
+			try {
+				return Ok(await _service.IsPrimeNumber(number));
+			}
+			catch (Exception e) {
+				return StatusCode(500, e);
+			}
 		}
 
 		[HttpGet("{number}")]
