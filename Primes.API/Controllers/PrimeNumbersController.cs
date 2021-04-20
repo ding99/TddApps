@@ -34,7 +34,14 @@ namespace Primes.API.Controllers {
 		[ProducesResponseType(400)]
 		[ProducesResponseType(500)]
 		public async Task<IActionResult> FirstPrimeNumbers(int number) {
-			return Ok(await Task.Run(() => new int[0]));
+			//return Ok(await Task.Run(() => new int[0]));
+			try {
+				return number < 0 ? StatusCode(400, new int[0])
+					: Ok(await _service.FirstPrimeNumbers(number));
+			}
+			catch (Exception e) {
+				return StatusCode(500, e);
+			}
 		}
 	}
 }
