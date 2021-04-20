@@ -39,10 +39,8 @@ namespace Primes.Lib.Concrete {
                     }
                 }
 
-                if (lists.Count < count) {
+                if (lists.Count < count)
                     lists.Clear();
-                    lists.Add(-1);
-                }
             }
 
             return lists.ToArray();
