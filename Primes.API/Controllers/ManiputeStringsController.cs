@@ -1,10 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Mvc;
 using Primes.Lib.Services;
+using System;
+using System.Threading.Tasks;
 
 namespace Primes.API.Controllers {
 	[Route("api/[controller]")]
@@ -27,7 +24,6 @@ namespace Primes.API.Controllers {
 			catch(Exception e) {
 				return StatusCode(500, e);
 			}
-//			return await Task.Run(() => Ok());
 		}
 	}
 }
